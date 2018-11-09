@@ -1,0 +1,53 @@
+C:\Users\主机名\AppData\Local\Atlassian\SourceTree
+
+设置全局用户名与邮箱
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+
+查看配置信息
+git config --list 
+
+cmd命令行窗口
+pwd 查看当前路径
+ll 查看当前路径下文件的详细信息
+cd .. 回到上级目录
+ls 查看目录下文件
+mkdir 名称 创建目录
+ls -a 显示隐藏文件
+echo "文件内容" >> test.txt
+cat test.txt
+vim text.txt编辑文件
+
+git init
+git add
+git commit -m "内容"
+git status
+
+git reset HEAD 文件    撤回暂存区内容
+git checkout -- 文件   清空工作区内容(与版本库同步丢次本地修改)
+git log                提交日志
+git reset --hard id    暂存区和仓库都回滚到某次提交时的位置
+git rm 文件            清空本地文件
+git commit --amend     如果commit注释写错了，只是想改一下注释，只需要：进入默认vim编辑器                         ，修改注释完毕后保存就好了。你会发现编辑器里你怎么输入都没反应，                        这是因为vim处在不可编辑状态，按下字母键 c（此时进入编辑状态），可                        以开始修改注释信息了修改好后，你会发现怎么都退出不了，然后如下操                       作：按下Esc (退出编辑状态)； 接着连按两次大写字母Z，你会惊喜的发                       现，终于保存好退出来了！
+
+git reset --soft HEAD^  仅仅是撤回commit操作，您写的代码仍然保留。
+                        HEAD^的意思是上一个版本，也可以写成HEAD~1
+                        如果你进行了2次commit，想都撤回，可以使用HEAD~2
+
+连接远程仓库
+登录gitHub,点击图标，settings，SSH and GPG keys,new SSH key,
+ssh-keygen -t rsa -C "wangylh@126.com"在本地命令行生成key
+到C:/Users/用户名/.ssh/ 下面生成key ，其中的公钥，复制到远程github上
+ssh -T git@github.com 测试链接是否可以
+
+添加远程仓库：
+git remote add origin git@.....
+git pull origin master 
+git push -u origin master
+
+git clone git@.... 克隆远程仓库到本地
+
+git tag 查看所有标签
+git tag name 创建标签
+git tag -a name -m "commit" 指定提交信息
+git tag -d name
