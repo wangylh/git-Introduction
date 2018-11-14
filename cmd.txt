@@ -52,3 +52,9 @@ git tag name 创建标签
 git tag -a name -m "commit" 指定提交信息
 git tag -d name
 git push origin name 标签发布
+
+git branch name 新建分支name
+git branch 查看分支
+git checkout name 切换分支
+git merge 分支名  合并分支
+git branch -d 分支名  删除分支
