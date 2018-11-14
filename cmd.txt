@@ -8,6 +8,7 @@ git config --global user.email "邮箱"
 git config --list 
 
 cmd命令行窗口
+dir 查看文件
 pwd 查看当前路径
 ll 查看当前路径下文件的详细信息
 cd .. 回到上级目录
